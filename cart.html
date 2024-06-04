@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cart</title>
+
+  <!-------------------------------------------------------custom css------------------------------------------------------------->
+  <link rel="stylesheet" href="./cart.css">
+  <!-------------------------------------------------------custom css------------------------------------------------------------->
+
+  <!-------------------------------------------------------favicon link------------------------------------------------------------->
+  <link rel="shortcut icon" href="./assets/logo final.png" type="image/x-icon">
+  <!-------------------------------------------------------favicon link------------------------------------------------------------->
+
+  <!-------------------------------------------------------bootstrap css link------------------------------------------------------------->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-------------------------------------------------------bootstrap css link------------------------------------------------------------->
+
+  <!-------------------------------------------------------fontawesome link------------------------------------------------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-------------------------------------------------------fontawesome link------------------------------------------------------------->
+
+
+  <!-------------------------------------------------------googlefont link------------------------------------------------------------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,800;1,900&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <!-------------------------------------------------------googlefont link------------------------------------------------------------->
+
+  <!-------------------------------------------------------sweetalert------------------------------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css">
+<script src="sweetalert2/dist/sweetalert2.min.js"></script>
+  <!-------------------------------------------------------sweetalert------------------------------------------------------------->
+
+
+</head>
+
+<body>
+
+
+  <!-------------------------------------------------------Navbar---------------------------------------------------------------------->
+
+<header>
+  <nav class="navbar navbar-nav navbar-expand-lg navbar-dark bg-black sticky-top ">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="./index.html">
+        <img src="logo.png" class="img-fluid" width="10%" style="margin-left: 20px;" alt="" >
+        <p>GO BRIGHT</p>
+        
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto order-lg-0">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase active text-light" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 text-uppercase text-light dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="lamps.html">lamps</a></li>
+              <li><a class="dropdown-item" href="lights.html">lights</a></li>
+              <li><a class="dropdown-item" href="home accent.html">Home Accents</a></li>
+              <li><a class="dropdown-item" href="fans.html">fans</a></li>
+              <li><a class="dropdown-item" href="fairy lights.html">fairy lights</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="client.html">CLIENTS</a>
+          </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="about us.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="contact us.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="gallery.html">Gallery</a>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" href="cart.html"><i class="fas fa-shopping-cart me-1"></i>
+              Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" href="forvalid.html"><i
+                class="fas fa-user-circle me-1"></i>Register/SignIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  
+
+  <!-------------------------------------------------------Navbar---------------------------------------------------------------------->
+
+  <!-------------------------------------------------------Cart banner---------------------------------------------------------------------->
+  <div class="container-fluid">
+    <div class="row">
+  <div class="text-center justify-content-center align-items-center">
+    <br>
+    <h1>My Cart</h1>
+  </div>
+    <img src="https://us.govee.com/cdn/shop/files/Gaming_Lights_Banner-p_1.jpg?v=1699001764" class="img-fluid" alt="">
+  </div>
+</div>
+  <!-------------------------------------------------------Cart banner---------------------------------------------------------------------->
+
+  <!-------------------------------------------------------Cart table---------------------------------------------------------------------->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
+
+        <div class="table-wishlist">
+          <table cellpadding="0" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Unit Price</th>
+                <th class="stoke ps-3">Stock </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="" id="cart1">
+                <td>
+
+                  <div>
+                    <div class="img-product">
+                      <img src="https://rukminim2.flixcart.com/image/850/1000/ku4ezrk0/table-lamp/n/f/l/wall-lamp-1-rmd-original-imag7b4sbzhxxzre.jpeg?q=90" alt="" class="mCS_img_loaded" id="cart">
+                    </div>
+                    <div class="name-product">
+                      Wall Lights
+
+                    </div>
+                  </div>
+                </td>
+                <td class="price laptop">$35</td>
+                <td><span class="in-stock-box stoke">In Stock</span></td>
+
+
+                <td class="text-center"><a href="#" class="trash-icon"><i class="fa-solid fa-trash"
+                      onclick="vanish1()"></i></a>
+                </td>
+
+              <tr id="cart2">
+                <td>
+                  <div class="">
+                    <div class="img-product">
+                      <img src="https://m.media-amazon.com/images/I/51XWZjMB0dL.jpg" alt="" class="mCS_img_loaded">
+                    </div>
+                    <div class="name-product">
+                      Chandliers
+
+                    </div>
+                  </div>
+                </td>
+                <td class="price">$70</td>
+                <td><span class="in-stock-box stoke">In Stock</span></td>
+                <td class="text-center"><a href="#" class="trash-icon"><i class="fa-solid fa-trash"
+                      onclick="vanish2()"></i></a></td>
+              </tr>
+              <tr id="cart3">
+                <td>
+                  <div class="">
+                    <div class="img-product">
+                      <img src="https://www.nestavenue.com.pk/cdn/shop/products/clodwal-table-lamp-dark-blue-silver-d46x76cm-p22579-88855_medium_e38147b7-1643-4ada-b099-03e81eea0b0d.jpg?v=1644408839" alt="" class="mCS_img_loaded">
+                    </div>
+                    <div class="name-product">
+                      Table Lamp
+                    </div>
+                  </div>
+                </td>
+                <td class="price">$35</td>
+                <td><span class="in-stock-box stoke">In Stock</span></td>
+                <td class="text-center"><a href="#" class="trash-icon"><i class="fa-solid fa-trash"
+                      onclick="vanish3()"></i></a></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+
+        <div class="total_price">
+          <table>
+            <tr>
+              <td>Total</td>
+              <td>$150.00</td>
+            </tr>
+          </table>
+        </div>
+        <!-- second table -->
+
+      </div>
+      <!-- column 2 -->
+      <div class="col-lg-12 col-sm-12 col-md-12 mt-5">
+        <div class="container p-5">
+          
+          <table>
+            <tr class="pt-5">
+              <td>Discount</td>
+              <td>$0</td>
+            </tr>
+            <tr>
+              <td>Delivery Charges</td>
+              <td>$10.00</td>
+            </tr>
+            <tr>
+              <td>Tax</td>
+              <td>$35.00</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>$150.00</td>
+            </tr>
+            <tr>
+              <td>
+                <h5>Subtotal</h5>
+
+              </td>
+              <td>
+                <h5>$190.00 </h5>
+              </td>
+            </tr>
+          </table>
+          <div class="d-grid" >
+            <button class="btn btn-warning mt-2 mb-2 " id="out">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------------------------Cart table---------------------------------------------------------------------->
+
+    <!-------------------------------------------------------Cart section---------------------------------------------------------------------->
+
+    <div class="container-fluid footer mt-4">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 pt-2 text-center">
+          <i class="fa-solid fa-check-to-slot icons pb-3"></i>
+          <p class="secure write">100% SECURE CHECKOUT</p>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-12 pt-2 text-center">
+          <i class="fa-solid fa-plane icons pb-3"></i>
+          <p class="secure write">SHIPPING TO OVER 70 COUNTRIES</p>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-12 pt-2 text-center">
+          <i class="fa-solid fa-headphones icons pb-3"></i>
+          <p class="secure write">OUTSTANDING SUPPORT</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-------------------------------------------------------Cart section---------------------------------------------------------------------->
+ 
+
+  
+  <script>
+    var picture = document.getElementById("cart1")
+    var picture2 = document.getElementById("cart2")
+    var picture3 = document.getElementById("cart3")
+    var picture4 = document.getElementById("cart4")
+    var picture5 = document.getElementById("cart5")
+    var picture6 = document.getElementById("cart6")
+
+    function vanish1() {
+      picture.remove()
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Product removed from wishlist.',
+        showConfirmButton: false,
+        timer: 2000
+      })
+    }
+
+    function vanish2() {
+      picture2.remove()
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Product removed from wishlist.',
+        showConfirmButton: false,
+        timer: 2000
+      })
+    }
+
+    function vanish3() {
+      picture3.remove()
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Product removed from wishlist.',
+        showConfirmButton: false,
+        timer: 2000
+      })
+    }
+
+    
+    
+
+  </script>
+
+
+  <!-------------------------------------------------------bootstrap js link---------------------------------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-------------------------------------------------------bootstrap js link---------------------------------------------------------------->
+
+  <!-------------------------------------------------------jquery cdn ---------------------------------------------------------------->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!-------------------------------------------------------jquery cdn ---------------------------------------------------------------->
+
+  <!-------------------------------------------------------jquery scrollup ---------------------------------------------------------------->
+  <script src="./js/script.js"></script>
+  <!-------------------------------------------------------jquery scrollup ---------------------------------------------------------------->
+
+  <!-------------------------------------------------------jquery scroll up script---------------------------------------------------------------->
+  <script>
+    $(function () {
+      $.scrollUp({
+        scrollImg: true,
+      });
+    });
+  </script>
+  <!-------------------------------------------------------jquery scroll up script---------------------------------------------------------------->
+<br>
+<!------------------------------------ Footer Start-------------------------------------------------- -->
+
+<section style="background-color:black;color: #fff;">
+  <div class="container text-center text-md-start mt-5">
+    <!-- Grid row -->
+    <div class="row mt-3">
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <!-- Content -->
+        <h6 class="text-uppercase fs-4 fw-bold mb-4 mt-5" >
+          <i class="fa-solid fa-lighthouse" ></i>
+          <img src="logo.png" class="img-fluid" width="30%" alt=""> <br>
+          GO BRIGHT Light House
+        </h6>
+        <div class="text-start">
+          <p>
+            "GO BRIGHT Light House offer a stunning top-quality 
+            collection of high brands of lighting products 
+            at affordable prices. Visit us to have 
+            ultra luxurious lights for the interior and exterior decor
+            of your home and office."
+          </p>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mt-5 mx-auto mb-4">
+        <!-- Links -->
+        <h6 class="  fs-4 fw-bold mb-4 ms-3 line1">
+        <i class="fa-solid fa-bars"></i> Menus
+        </h6>
+        <p>
+        <div class="nav-link">
+          <ul class>
+            <li style="margin-top: 8px;">
+              <a class="nav-link " href="index.html"> Home </a>
+            </li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="fairy lights.html">Fairy lights</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="lamps.html">Lamps </a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="fans.html">Fans</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="lights.html">Lights</a></li>
+            <br>
+              <li style="margin-top: 8px;"><a class="nav-link" href="home accent.html">Home Accents</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="contact us.html">Contact Us</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link   " href="about us.html">About Us</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link   " href="gallery.html">Gallery</a></li>
+
+          </ul>
+        </div>
+      </div>
+     
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-5 ">
+        <!-- Links -->
+        <h6 class=" fs-4 fw-bold mb-4 line2">Head Office</h6>
+        <p><i style="color: #ffb223; ;" class=" fas fa-envelope me-1"></i><span
+            class="fs-6">info@GOBRIGHT.com</span>
+        </p>
+        <p><i style="color: #ffb223; ;" class=" fas fa-phone me-1"></i><span>
+            (021) 36630102</span>
+        </p>
+        <p>
+          <i style="color: #ffb223;" class="fa-solid fa-location "></i>
+          <span class="ms-1"> Aptech Computer Education North Nazimabad
+            Center، SD-1, Block A North Nazimabad Town,
+            Karachi, 74700</span>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+  </div>
+</section>
+<!-- Section: Links  -->
+<div style="height: 1px;background-color: grey;"></div>
+<!-- Copyright -->
+<div class="text-center p-4" style="background-color: #000;color: #fff;">
+
+  Copyright © 2023 GO BRIGHT Light House. | All Rights Reserved
+</div>
+<!-- Copyright -->
+</footer>
+
+<!------------------------------------ Footer ended------------------------------------------- --->
+
+
+
+
+</body>
+
+</html>
+
+<script>
+  $(document).ready(function(){
+    $('#out').click(function(){
+    Swal.fire({
+      title: "Good job!",
+      text: "Checkout Successfully",
+      icon: "success"
+    });
+  })
+  })
+</script>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-------------------------------------------------------custom css------------------------------------------------------------->
+   <link rel="stylesheet" href="./cart.css">
+   <!-------------------------------------------------------custom css------------------------------------------------------------->
+ 
+   <!-------------------------------------------------------favicon link------------------------------------------------------------->
+   <link rel="shortcut icon" href="./assets/logo final.png" type="image/x-icon">
+   <!-------------------------------------------------------favicon link------------------------------------------------------------->
+ 
+   <!-------------------------------------------------------bootstrap css link------------------------------------------------------------->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <!-------------------------------------------------------bootstrap css link------------------------------------------------------------->
+ 
+   <!-------------------------------------------------------fontawesome link------------------------------------------------------------->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+     crossorigin="anonymous" referrerpolicy="no-referrer">
+   <!-------------------------------------------------------fontawesome link------------------------------------------------------------->
+ 
+ 
+   <!-------------------------------------------------------googlefont link------------------------------------------------------------->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,800;1,900&family=Poppins:wght@300;400;500&display=swap"
+     rel="stylesheet">
+   <!-------------------------------------------------------googlefont link------------------------------------------------------------->
+ 
+   <!-------------------------------------------------------sweetalert------------------------------------------------------------->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="sweetalert2.all.min.js"></script>
+   <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css">
+<script src="sweetalert2/dist/sweetalert2.min.js"></script>
+   <!-------------------------------------------------------sweetalert------------------------------------------------------------->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ </head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fairy Lights</title>
+    <!-- bootstap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+
+      
+.navbar {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: rgba(250, 174, 33, 0.788) !important;
+
+}
+
+.nav-link a {
+  font-size: 14px;
+  font-weight: 700
+}
+
+.dropdown-item:hover {
+  color: rgba(250, 174, 33, 0.788) !important;
+
+}
+
+.dropdown-item {
+  color: black !important;
+  background-color: white !important;
+  font-weight: 500 !important;
+}
+
+.navbar {
+  height: auto;
+
+}
+
+.navbar-brand img {
+  height: 80px;
+  width: fit-content;
+}
+        .h1{
+text-align: center;
+font-size: 35px;
+margin-top: 20px;
+
+}
+.card{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.headline{
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  color:rgb(124, 119, 119);
+  font-size: large;
+}
+.line{
+text-align: center;
+color:rgb(100, 111, 122);
+
+}
+.modalimg{
+  justify-content: center;
+}
+    </style>
+</head>
+<body>
+         <!-- NAVBAR -->
+<header>
+  <nav class="navbar navbar-nav navbar-expand-lg navbar-dark bg-black sticky-top ">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="./index.html">
+        <img src="logo.png" class="img-fluid" width="10%" style="margin-left: 20px;" alt="" >
+        <p>GO BRIGHT</p>
+        
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto order-lg-0">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase active text-light" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 text-uppercase text-light dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="lamps.html">lamps</a></li>
+              <li><a class="dropdown-item" href="lights.html">lights</a></li>
+              <li><a class="dropdown-item" href="home accent.html">Home Accents</a></li>
+              <li><a class="dropdown-item" href="fans.html">fans</a></li>
+              <li><a class="dropdown-item" href="fairy lights.html">fairy lights</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="client.html">CLIENTS</a>
+          </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="about us.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="contact us.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="gallery.html">Gallery</a>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" href="cart.html"><i class="fas fa-shopping-cart me-1"></i>
+              Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" href="forvalid.html"><i
+                class="fas fa-user-circle me-1"></i>Register/SignIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <!-- nav end -->
+      
+         
+
+
+
+
+  <!-- banner content -->
+  <h1 class="h1">FAIRY LIGTHS </h1>
+  <p class="headline">Find a variety of styles, materials, and features to suit your lighting needs</p>
+    <!-- <img src="image/image1.jpg"width="100%" alt=""> -->
+    <img src="https://images.squarespace-cdn.com/content/v1/5e30b4c769dcbf426b421101/1626375405517-TRZEAWA3UKEJVYJ1HW76/Summitridge+Drive+Beverly+Hills+modern+home+LED+lit+exterior+outdoor+lounge?format=1500w" width="100%" height="575px" alt="">
+  <!--  banner content -->
+
+<!-- Cards Start -->
+    <div class="container">
+        <div class="row ">
+
+    <!-- LED LightsCards Start -->
+            <h1 class="h1">LED lights</h1>
+          <p class="line">Elevate your space with our stunning assortment of LED ceiling lights</p>
+          <img src="https://www.darklightdesign.com/media/24632/homepage-slider-2023-lighting-design-1920px-1-ldtg-50percent.jpg?width=1920" width="100%" height="300px" alt="">
+
+          <!-- card 1 start -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                   <img src="https://m.media-amazon.com/images/I/61JhqsltGnL._AC_UL480_FMwebp_QL65_.jpg" height="262px" alt="">
+                  <div class="card-body">
+                    <h5 class="card-title">Ceiling LED Lights</h5>
+                    Rs.<i><b>1199.PKR</b></i> <br>
+                    <a href="#" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#Modal1">Buy Now</a>
+
+          <!-- Modal 1 -->
+           <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Ceiling LED Lights</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+           <div class="modal-body">
+           <img  class="modalimg" src="https://m.media-amazon.com/images/I/61JhqsltGnL._AC_UL480_FMwebp_QL65_.jpg"width="400px" height="350px"  alt="">
+           <h6>About This Item</h6>
+           <p>Elevate your space with our stunning assortment of LED ceiling lights. It contains both Downlights lights and and some other ceiling lights.</p>
+           Rs. <del><i>1500.PKR</i></del>
+           <i><b>1199.PKR</b></i>
+           </div>
+           <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+           <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+           </div>
+           </div>
+           </div>
+           </div>
+                  </div>
+                </div>
+              </div>
+          <!-- card 1 end -->
+
+          <!-- card 2 start -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+               <img src="https://falconlights.pk/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-04-at-5.17.37-PM-1-247x296.jpeg" height="262px" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Rounded Wall Led Lights</h5>
+                Rs.<i><b>1599.PKR</b></i> <br>
+                <a href="#" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#Modal2">Buy Now</a>
+
+      <!-- Modal 2 -->
+       <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Rounded Wall Led Light</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+       <img  class="modalimg" src="https://falconlights.pk/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-04-at-5.17.37-PM-1-247x296.jpeg"width="400px" height="350px"  alt="">
+       <h6>About This Item</h6>
+       <p>Elevate your space with our stunning assortment of LED ceiling lights. It contains both Downlights lights and and some other ceiling lights.</p>
+       Rs. <del><i>1800.PKR</i></del>
+       <i><b>1599.PKR</b></i>
+       </div>
+       <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+       <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+       </div>
+       </div>
+       </div>
+       </div>
+              </div>
+            </div>
+          </div>
+      <!-- card 2 end -->
+
+      <!-- card 3 start -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+           <img src="data:image/jpeg;base64,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" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Led Neon Light</h5>
+            Rs.<i><b>1800.PKR</b></i> <br>
+            <a href="#" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#Modal3">Buy Now</a>
+
+  <!-- Modal 3 -->
+   <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h1 class="modal-title fs-5" id="exampleModalLabel">Led Neon Light</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+   </div>
+   <div class="modal-body">
+   <img  class="modalimg" src="data:image/jpeg;base64,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"width="400px" height="350px"  alt="">
+   <h6> About This Item</h6>
+   <p>Elevate your space with our stunning assortment of LED ceiling lights. It contains both Downlights lights and and some other ceiling lights.</p>
+   Rs. <del><i>1300.PKR</i></del>
+   <i><b>1200.PKR</b></i>
+   </div>
+   <div class="modal-footer">
+   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+   <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+   </div>
+   </div>
+   </div>
+   </div>
+          </div>
+        </div>
+      </div>
+  <!-- card 3 end -->
+
+  <!-- card 4 start -->
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="card">
+       <img src="https://falconlights.pk/wp-content/uploads/2023/10/41lcGSGOf6L._AC_SX569_-247x296.jpg" height="262px" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Led wall light</h5>
+        Rs.<i><b>1600.PKR</b></i> <br>
+        <a href="#" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#Modal4">Buy Now</a>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h1 class="modal-title fs-5" id="exampleModalLabel">Wall LED light</h1>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img  class="modalimg" src="https://falconlights.pk/wp-content/uploads/2023/10/41lcGSGOf6L._AC_SX569_-247x296.jpg"width="400px" height="350px"  alt="">
+<h6>About This Item</h6>
+<p>Elevate your space with our stunning assortment of LED wall lights. It contains both Downlights lights and and some other wall lights.</p>
+Rs. <del><i>1799</i></del>
+<i><b>1600.PKR</b></i>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="button" class="btn btn-warning btnn">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+<!-- card 4 end -->
+
+<h1 class="h1">DECORE LIGHTS</h1>
+<p class="line">Creating a cozy and welcoming atmosphere</p>
+<img src="https://img.wintergreencorp.com/images/we/156989/LED-Mini-Lights-Homepage-Hero.jpg" alt="">
+
+
+
+<!-- card 5 start -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="card">
+       <img src="https://i0.wp.com/minimog.pk/wp-content/uploads/2023/08/Glass-Lens-Mosaic-Ball-Battery-Usb-String-Fairy-Lights-2.jpg?resize=595%2C595&ssl=1" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Ball string F-lights</h5>
+        Rs.<i><b>1000.PKR</b></i> <br>
+        <a href="#" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#Modal5">Buy Now</a>
+
+<!-- Modal 5 -->
+<div class="modal fade" id="Modal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h1 class="modal-title fs-5" id="exampleModalLabel">Ball string F-lights</h1>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img  class="modalimg" src="https://i0.wp.com/minimog.pk/wp-content/uploads/2023/08/Glass-Lens-Mosaic-Ball-Battery-Usb-String-Fairy-Lights-2.jpg?resize=595%2C595&ssl=1"width="400px" height="350px"  alt="">
+<h6>About This Item</h6>
+<p>small coloured electric lights used for decoration, especially at festivals such as Christmas.
+</p>
+Rs. <del><i>1200.PKR</i></del>
+<i><b>1000.PKR</b></i>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="button" class="btn btn-warning btnn">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+<!-- card 5 end -->
+
+<!-- card 6 start -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="card">
+       <img src="https://i0.wp.com/minimog.pk/wp-content/uploads/2023/08/4cm-Christmas-Box-Lighting-2m-20-LED-With-Battery-3AA-Battery-Powered-Wicker-Rattan-Balls-Garlands-Holiday-Lighting-3.jpg?w=640&ssl=1" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Christmas ball light</h5>
+        Rs.<i><b>900.PKR</b></i> <br>
+        <a href="#" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#Modal6">Buy Now</a>
+
+<!-- Modal 6 -->
+<div class="modal fade" id="Modal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h1 class="modal-title fs-5" id="exampleModalLabel">Christmas ball light</h1>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img  class="modalimg" src="https://i0.wp.com/minimog.pk/wp-content/uploads/2023/08/4cm-Christmas-Box-Lighting-2m-20-LED-With-Battery-3AA-Battery-Powered-Wicker-Rattan-Balls-Garlands-Holiday-Lighting-3.jpg?w=640&ssl=1"width="400px" height="350px"  alt="">
+<h6>About This Item</h6>
+<p>small coloured electric lights used for decoration, especially at festivals such as Christmas.
+</p>
+Rs. <del><i>1000.PKR</i></del>
+<i><b>900.PKR</b></i>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="button" class="btn btn-warning btnn">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+<!-- card 6 end -->
+
+<!-- card 7 start -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="card">
+       <img src="https://i0.wp.com/minimog.pk/wp-content/uploads/2023/08/930876298935161792.jpg?w=800&ssl=1" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Ball lights</h5>
+        Rs.<i><b>1500.PKR</b></i> <br>
+        <a href="#" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#Modal7">Buy Now</a>
+
+<!-- Modal 7 -->
+<div class="modal fade" id="Modal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h1 class="modal-title fs-5" id="exampleModalLabel">Ball lights</h1>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img  class="modalimg" src="https://i0.wp.com/minimog.pk/wp-content/uploads/2023/08/930876298935161792.jpg?w=800&ssl=1"width="400px" height="350px"  alt="">
+<h6>About This Item</h6>
+<p>small coloured electric lights used for decoration, especially at festivals such as Christmas.
+</p>
+Rs. <del><i>1600.PKR</i></del>
+<i><b>1500.PKR</b></i>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="button" class="btn btn-warning btnn">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+<!-- card 7 end -->
+
+<!-- card 8 start -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="card">
+       <img src="https://i0.wp.com/minimog.pk/wp-content/uploads/2023/08/H7ab1f2ada23346449b31d602ce829749n.jpg?w=790&ssl=1" height="262px" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Star curtain light</h5>
+        Rs.<i><b>2000.PKR</b></i> <br>
+        <a href="#" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#Modal8">Buy Now</a>
+
+<!-- Modal 8 -->
+<div class="modal fade" id="Modal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h1 class="modal-title fs-5" id="exampleModalLabel">Star curtain light</h1>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img  class="modalimg" src="https://i0.wp.com/minimog.pk/wp-content/uploads/2023/08/H7ab1f2ada23346449b31d602ce829749n.jpg?w=790&ssl=1"width="400px" height="350px"  alt="">
+<h6>About This Item</h6>
+<p>small coloured electric lights used for decoration, especially at festivals such as Christmas.
+</p>
+Rs. <del><i>1300.PKR</i></del>
+<i><b>800.PKR</b></i>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="button" class="btn btn-warning btnn">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+<!-- card 8 end -->
+
+
+        </div>
+    </div>
+    <!-- cards end -->
+    <br><br>
+<!-------------------------------------- pdf button -------------------------- -->
+<h1 style="text-align: center;">More Information</h1> 
+<p style="text-align: center;">To Get More Information About Our Products,You can downlaod the document here.</p> <br>
+<div class="container text center" style="width: fit-content;">
+  <div class="row">
+    <!-- <a href="documentation1.pdf" class="btn btn-warning" downlaod>Download Pdf</a> -->
+    <a href="documentation2 word.docx" downlaod> <button class="btn btn-warning">Downlaod  </button></a>
+
+
+  
+
+</div>
+</div>
+
+<!-------------------------------------- pdf button -------------------------- -->
+
+  <!------------------------------------ Footer Start-------------------------------------------------- -->
+
+  <section style="background-color:black;color: #fff;">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fs-4 fw-bold mb-4 mt-5" >
+            <i class="fa-solid fa-lighthouse" ></i>
+            <img src="logo.png" class="img-fluid" width="30%" alt=""> <br>
+            GO BRIGHT Light House
+          </h6>
+          <div class="text-start">
+            <p>
+              "GO BRIGHT Light House offer a stunning top-quality 
+              collection of high brands of lighting products 
+              at affordable prices. Visit us to have 
+              ultra luxurious lights for the interior and exterior decor
+              of your home and office."
+            </p>
+          </div>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mt-5 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="  fs-4 fw-bold mb-4 ms-3 line1">
+          <i class="fa-solid fa-bars"></i> Menus
+          </h6>
+          <p>
+          <div class="nav-link">
+            <ul class>
+              <li style="margin-top: 8px;">
+                <a class="nav-link " href="index.html"> Home </a>
+              </li>
+              <br>
+              <li style="margin-top: 8px;"><a class="nav-link" href="fairy lights.html">Fairy lights</a></li>
+              <br>
+              <li style="margin-top: 8px;"><a class="nav-link" href="lamps.html">Lamps </a></li>
+              <br>
+              <li style="margin-top: 8px;"><a class="nav-link" href="fans.html">Fans</a></li>
+              <br>
+              <li style="margin-top: 8px;"><a class="nav-link" href="lights.html">Lights</a></li>
+              <br>
+              <li style="margin-top: 8px;"><a class="nav-link" href="home accent.html">Home Accents</a></li>
+              <br>
+              <li style="margin-top: 8px;"><a class="nav-link" href="contact us.html">Contact Us</a></li>
+              <br>
+              <li style="margin-top: 8px;"><a class="nav-link   " href="about us.html">About Us</a></li>
+              <br>
+              <li style="margin-top: 8px;"><a class="nav-link   " href="gallery.html">Gallery</a></li>
+
+            </ul>
+          </div>
+        </div>
+       
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-5 ">
+          <!-- Links -->
+          <h6 class=" fs-4 fw-bold mb-4 line2">Head Office</h6>
+          <p><i style="color: #ffb223; ;" class=" fas fa-envelope me-1"></i><span
+              class="fs-6">info@GOBRIGHT.com</span>
+          </p>
+          <p><i style="color: #ffb223; ;" class=" fas fa-phone me-1"></i><span>
+              (021) 36630102</span>
+          </p>
+          <p>
+            <i style="color: #ffb223;" class="fa-solid fa-location "></i>
+            <span class="ms-1"> Aptech Computer Education North Nazimabad
+              Center، SD-1, Block A North Nazimabad Town,
+              Karachi, 74700</span>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+  <div style="height: 1px;background-color: grey;"></div>
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: #000;color: #fff;">
+
+    Copyright © 2023 GO BRIGHT Light House. | All Rights Reserved
+  </div>
+  <!-- Copyright -->
+  </footer>
+  
+  <!------------------------------------ Footer ended------------------------------------------- --->
+  
+</body>
+</html>
+<script>
+$(document).ready(function(){
+  $('.btnn').click(function(){
+  Swal.fire({
+    title: "Good job!",
+    text: "Item added to cart!",
+    icon: "success"
+  });
+})
+})
+</script>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    /* body{
+        background-image: url("form\ background\ image.avif") ;
+        
+    } */
+    .container{
+        text-align: center;
+    }
+
+    .abba{
+       border: 4px solid transparent;
+       /* margin: 50px 500px 100px 500px;  */
+       /* width: 380px;
+       height: 670px;
+       /* padding-left: 30px; */
+       /* padding-top: 10px; */
+    }
+    input{
+        border-radius: 5px;
+        width: 300px;
+        height: 30px;
+    }
+    .head{
+        color: black;
+        text-decoration: double underline;
+        /* padding-left: 50px; */
+    }
+    .btn{
+        border-radius: 5px;
+        width: 80px;
+        height: 40px;
+        font-size: 90%; 
+        background-color: yellow;
+    }
+     i{
+        color: red;
+    }
+    .check{
+        width: 5%;
+        height: 20px;
+        margin-right: 280px;
+
+        
+    }
+</style>
+
+
+
+
+    <div class="abba">
+        <div class="container">
+    <form onsubmit="return validation()">
+        <h1 class="head">SIGN UP</h1><br>
+
+        <b> <label for="" >Username</label><br><br> </b>
+        <input type="text" id="user">
+        <br>
+        <b><i id="Username"></i></b> <br>
+
+        <b> <label for="">password</label><br><br> </b>
+        <input type="password" id="pass">
+        <br>
+        <b><i id="pwd"> </i></b>
+        <input type="checkbox" class="check" onclick="show()"> <br>
+
+        <b> <label for="" >Confirm Password</label><br><br> </b>
+        <input type="password" id="Cpass">
+        <br>
+       <b><i id="Cpwd"></i></b> <br>
+
+        <b> <label for="" >Mobile Number</label><br><br> </b>
+        <input type="number" id="mob" placeholder="+92">
+        <br>
+        <b><i id="Mobile"></i></b> <br>
+
+        <b> <label for="" >Email</label><br><br> </b>
+        <input type="text" id="mail">
+        <br>
+        <b><i id="Email"></i></b> <br>
+
+        <button class="btn"><b> Submit </b></button>
+        <br><br>
+        <a href="login.html" > <b>....LOGIN </b></a>
+
+    </div>
+    </div>      
+        </form>
+
+    
+        <script>
+
+        function validation(){
+            
+            
+            var user=document.getElementById("user").value
+            if(user==""){
+                document.getElementById("Username").innerHTML="**Please fill this field <br>";
+                return false;
+            }
+            if(user.length<3 || user.length>20){
+                document.getElementById("Username").innerHTML="Atleast Enter your Valid name <br>"
+                return false;
+            }
+            else{
+                document.getElementById("Username").innerHTML=null
+            }
+        
+            var pass=document.getElementById("pass").value
+            if(pass==""){
+                document.getElementById("pwd").innerHTML="**Please fill this field <br>";
+                return false;
+            }
+            if(pass.length<6){
+                document.getElementById("pwd").innerHTML="**Please fill strong password <br>";
+                return false;
+            }
+            
+            else{
+                document.getElementById("pwd").innerHTML=null
+            }
+            var Cpass=document.getElementById("Cpass").value
+            if(Cpass==""){
+                document.getElementById("Cpwd").innerHTML="**Please fill this field <br>";
+                return false
+            }
+            if(Cpass !=pass){
+                document.getElementById("Cpwd").innerHTML="**Please enter correct password <br>";
+                return false
+            }
+            
+            else{
+                document.getElementById("Cpwd").innerHTML=null
+            }
+            var mob=document.getElementById("mob").value
+            if(mob==""){
+                document.getElementById("Mobile").innerHTML="**Please fill this field <br>";
+                return false
+            }
+            else{
+                document.getElementById("Mobile").innerHTML=null
+            }
+            
+            var mail=document.getElementById("mail").value
+            if(mail==""){
+                document.getElementById("Email").innerHTML="**Please fill this field <br>";
+                return false
+            }
+            else if(!mail.includes('@')) {
+                    document.getElementById('Email').innerHTML = "Invalid Email Format '@'";
+                    return false
+                }    
+            else{
+                document.getElementById("Email").innerHTML=null
+            }
+
+        }
+
+        function show(){
+            var password=document.getElementById("pass")
+
+            if(password.type ==="password"){
+                password.type="text"
+            }
+            else{
+                password.type="password"
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+        
+    
+    </script>   
+</body>
+</html>

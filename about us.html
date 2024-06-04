@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-dropdown/2.0.3/jquery.dropdown.css" integrity="sha512-5xCeY1Hd85tDJYzQHzhlOk+yeSSkudSWW6Rn/sFXOcJOA6HtaxXEDTBQQ8k+c+72SGlqgH89AT8CplRZEc2Tgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       
+    /* navbar css */
+        .navbar {
+          font-family: 'Playfair Display', serif;
+          font-weight: 700;
+        }
+
+        .nav-link:hover {
+          color: rgba(250, 174, 33, 0.788) !important;
+
+        }
+
+        .nav-link a {
+          font-size: 14px;
+          font-weight: 700
+        }
+
+        .dropdown-item:hover {
+          color: rgba(250, 174, 33, 0.788) !important;
+
+        }
+
+        .dropdown-item {
+          color: black !important;
+          background-color: white !important;
+          font-weight: 500 !important;
+        }
+
+        .navbar {
+          height: auto;
+
+        }
+
+        .navbar-brand img {
+          height: 80px;
+          width: fit-content;
+        }
+          /* vanbarcss end */
+
+        .h1{
+            font-family:Arial, Helvetica, sans-serif;
+
+        }
+       
+        .h3{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .headline{
+          text-align: center;
+          color:rgb(121, 120, 120);
+          font-size: large;
+          font-family:Arial, Helvetica, sans-serif;
+          margin-top:-10px;
+
+        }
+        .line{
+            color:rgb(116, 113, 113);
+            font-family:Calibri;
+            font-size: large;
+          /* margin-top:-15px; */
+        }
+        .parent{
+            display: flex;
+            margin: 20px;
+        }
+   
+      
+    
+    </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+<header>
+  <nav class="navbar navbar-nav navbar-expand-lg navbar-dark bg-black sticky-top ">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="./index.html">
+        <img src="logo.png" class="img-fluid" width="10%" style="margin-left: 20px;" alt="" >
+        <p>GO BRIGHT</p>
+        
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto order-lg-0">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase active text-light" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 text-uppercase text-light dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="lamps.html">lamps</a></li>
+              <li><a class="dropdown-item" href="lights.html">lights</a></li>
+              <li><a class="dropdown-item" href="home accent.html">Home Accents</a></li>
+              <li><a class="dropdown-item" href="fans.html">fans</a></li>
+              <li><a class="dropdown-item" href="fairy lights.html">fairy lights</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="client.html">CLIENTS</a>
+          </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="about us.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="contact us.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="gallery.html">Gallery</a>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" href="cart.html"><i class="fas fa-shopping-cart me-1"></i>
+              Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" href="forvalid.html"><i
+                class="fas fa-user-circle me-1"></i>Register/SignIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+    <!-- nav end -->
+    
+
+<br>
+    <h1 class="h1 text-center">ABOUT US</h1>
+        <p class="headline">We enlighten your darkness and make your life colorful. Go BRIGHT is unique in quality and leads in variety. We convert your house into home.</p>
+        <div class="container1">
+
+         <img class="img-fluid" src="https://images.pexels.com/photos/12727821/pexels-photo-12727821.jpeg?auto=compress&cs=tinysrgb&w=600" height="700px" width="1300px" >
+</div>
+        <div class="parent">   
+
+<div class="box">
+       <h3 class="h3 text-center"><b>We illuminate your world</b></h3>
+       <p class="line mx-2">Some explore its beauty,
+           while others talk about its effects and the wisdom from a flash of inspiration.
+            There’s a strong contrast between lightning’s beautiful appearance and 
+            dangerous impact. Here, we feature some of our favorite lightning quotes.
+             "Electricity is really just organized lightning."
+        </p>
+</div>
+
+<div class="box">
+          <h3 class="h3 text-center"><b>We deal in quality goods,</b></h3>
+       <p class="line mx-2">with glowing stars and we shine your house with Edison’s
+        invention and the latest century is witnessing the best electronic product 
+         in the town. Visit, buy and be a congenial custome.“As different as a
+          moonbeam from lightning, or frost from fire.” “If lightning is the anger
+           of the gods, then the gods are concerned mostly about trees.”
+            </p>
+</div>
+
+    </div>
+      <!----___________________________________--FAQ---_____________________________ -->
+ <h1 class="h1 text-center">FAQs</h1>
+<div class="container">
+
+ <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+           <b>Is my light guaranted?
+        </b> 
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">All the products presented on our site are new and therefore have a 2-year warranty. The warranty comes into force upon receipt of the goods.
+
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <b>Does led light save energy?
+            </b>
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Energy saving is one of their biggest advantages. Did you know that an LED light fixture can cut down your energy consumption by up to 80%</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            <b>When should I plan my lighting?</b>
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">If you’re going to be changing anything substantial in a room, think about the lighting early on. Building from scratch or totally renovating is a chance to completely transform your space with light. That means getting lighting cables of the right kind in the right number to the right locations as early as possible.</div>
+        </div>
+      </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+          <b>How much should I budget for lighting?</b>
+        </button>
+      </h2>
+      <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">This is a tricky question because everyone’s project is different, but as a rule of thumb, people who really want to invest in getting their lighting right, with good design and high-quality fittings and control, typically spend as much on lighting as they do on their kitchen or their windows and doors.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+          <b>Can I use LED lights in the floor with underfloor heating?</b>
+        </button>
+      </h2>
+      <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Yes, you can, and it’s a very effective way of delivering accent lighting, or even uplighting rooms in which there are issues with fitting lights in the ceiling, such as pitched roof spaces.</div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+    <!----______________________________--- FAQ END---__________________________________ -->
+           <!-- _____________________________team members -->
+                        <h1 class="team text-center"> TEAM MEMBERS </h1>
+           <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12">
+                <div class="card" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="https://i.pinimg.com/474x/b5/4c/e1/b54ce1bf5679515d1a062c85037eeb1c.jpg" class="img-fluid rounded-start" alt="">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">  HASNAIN ASHRAF</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 col-md-12">
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="https://pbs.twimg.com/media/EmpreNeVgAANHoD.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">RAO TARIQ</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card mb-3" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="https://cdn.vox-cdn.com/thumbor/GhanPgSp_6daghkxrQ1SKe6di6k=/0x52:1920x1080/1400x1400/filters:focal(856x560:1162x866):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/55808065/stuff.0.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title"> AREESHA KHALIL</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card mb-3" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="https://cdn.vox-cdn.com/thumbor/GhanPgSp_6daghkxrQ1SKe6di6k=/0x52:1920x1080/1400x1400/filters:focal(856x560:1162x866):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/55808065/stuff.0.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">NEHA ASGAR </h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card mb-3" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="https://cdn.vox-cdn.com/thumbor/GhanPgSp_6daghkxrQ1SKe6di6k=/0x52:1920x1080/1400x1400/filters:focal(856x560:1162x866):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/55808065/stuff.0.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title"> NIMRA </h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    <!------------------------------------ Footer Start-------------------------------------------------- -->
+   
+    <section style="background-color:black;color: #fff;">
+     <div class="container text-center text-md-start mt-5">
+       <!-- Grid row -->
+       <div class="row mt-3">
+         <!-- Grid column -->
+         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+           <!-- Content -->
+           <h6 class="text-uppercase fs-4 fw-bold mb-4 mt-5" >
+             <i class="fa-solid fa-lighthouse" ></i>
+             <img src="logo.png" class="img-fluid" width="30%" alt=""> <br>
+             GO BRIGHT Light House
+           </h6>
+           <div class="text-start">
+             <p>
+               "GO BRIGHT Light House offer a stunning top-quality 
+               collection of high brands of lighting products 
+               at affordable prices. Visit us to have 
+               ultra luxurious lights for the interior and exterior decor
+               of your home and office."
+             </p>
+           </div>
+         </div>
+         <!-- Grid column -->
+   
+         <!-- Grid column -->
+         <div class="col-md-2 col-lg-2 col-xl-2 mt-5 mx-auto mb-4">
+           <!-- Links -->
+           <h6 class="  fs-4 fw-bold mb-4 ms-3 line1">
+           <i class="fa-solid fa-bars"></i> Menus
+           </h6>
+           <p>
+           <div class="nav-link">
+             <ul class>
+               <li style="margin-top: 8px;">
+                 <a class="nav-link " href="index.html"> Home </a>
+               </li>
+               <br>
+               <li style="margin-top: 8px;"><a class="nav-link" href="fairy lights.html">Fairy lights</a></li>
+               <br>
+               <li style="margin-top: 8px;"><a class="nav-link" href="lamps.html">Lamps </a></li>
+               <br>
+               <li style="margin-top: 8px;"><a class="nav-link" href="fans.html">Fans</a></li>
+               <br>
+               <li style="margin-top: 8px;"><a class="nav-link" href="lights.html">Lights</a></li>
+               <br>
+              <li style="margin-top: 8px;"><a class="nav-link" href="home accent.html">Home Accents</a></li>
+               <br>
+               <li style="margin-top: 8px;"><a class="nav-link" href="contact us.html">Contact Us</a></li>
+               <br>
+               <li style="margin-top: 8px;"><a class="nav-link   " href="about us.html">About Us</a></li>
+               <br>
+              <li style="margin-top: 8px;"><a class="nav-link   " href="gallery.html">Gallery</a></li>
+
+             </ul>
+           </div>
+         </div>
+        
+         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-5 ">
+           <!-- Links -->
+           <h6 class=" fs-4 fw-bold mb-4 line2">Head Office</h6>
+           <p><i style="color: #ffb223; ;" class=" fas fa-envelope me-1"></i><span
+               class="fs-6">info@mountaineers.com</span>
+           </p>
+           <p><i style="color: #ffb223; ;" class=" fas fa-phone me-1"></i><span>
+               (021) 36630102</span>
+           </p>
+           <p>
+             <i style="color: #ffb223;" class="fa-solid fa-location "></i>
+             <span class="ms-1"> Aptech Computer Education North Nazimabad
+               Center، SD-1, Block A North Nazimabad Town,
+               Karachi, 74700</span>
+           </p>
+   
+         </div>
+         <!-- Grid column -->
+       </div>
+       <!-- Grid row -->
+     </div>
+   </section>
+   <!-- Section: Links  -->
+   <div style="height: 1px;background-color: grey;"></div>
+   <!-- Copyright -->
+   <div class="text-center p-4" style="background-color: #000;color: #fff;">
+   
+     Copyright © 2023 GO BRIGHT Light House. | All Rights Reserved
+   </div>
+   <!-- Copyright -->
+   </footer>
+   
+   <!------------------------------------ Footer ended------------------------------------------- --->
+   
+
+  
+</body>
+</html>

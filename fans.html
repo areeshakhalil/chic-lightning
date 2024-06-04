@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fans</title>
+    <!-- bootstap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+  <!----------------------- jquery------------------------------- -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+  <!----------------------- jquery------------------------------- -->
+
+  <!-------------------------------------------------------custom css------------------------------------------------------------->
+  <link rel="stylesheet" href="./cart.css">
+  <!-------------------------------------------------------custom css------------------------------------------------------------->
+
+  <!-------------------------------------------------------favicon link------------------------------------------------------------->
+  <link rel="shortcut icon" href="./assets/logo final.png" type="image/x-icon">
+  <!-------------------------------------------------------favicon link------------------------------------------------------------->
+
+  <!-------------------------------------------------------bootstrap css link------------------------------------------------------------->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-------------------------------------------------------bootstrap css link------------------------------------------------------------->
+
+  <!-------------------------------------------------------fontawesome link------------------------------------------------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-------------------------------------------------------fontawesome link------------------------------------------------------------->
+
+
+  <!-------------------------------------------------------googlefont link------------------------------------------------------------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,800;1,900&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <!-------------------------------------------------------googlefont link------------------------------------------------------------->
+
+  <!-------------------------------------------------------sweetalert------------------------------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css">
+<script src="sweetalert2/dist/sweetalert2.min.js"></script>
+  <!-------------------------------------------------------sweetalert------------------------------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+    <style>
+       /* navbar css */
+       .navbar {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: rgba(250, 174, 33, 0.788) !important;
+
+}
+
+.nav-link a {
+  font-size: 14px;
+  font-weight: 700
+}
+
+.dropdown-item:hover {
+  color: rgba(250, 174, 33, 0.788) !important;
+
+}
+
+.dropdown-item {
+  color: black !important;
+  background-color: white !important;
+  font-weight: 500 !important;
+}
+
+.navbar {
+  height: auto;
+
+}
+
+.navbar-brand img {
+  height: 80px;
+  width: fit-content;
+}
+  /* vanbarcss end */
+    
+      .h1{
+text-align: center;
+font-size: 35px;
+margin-top: 20px;
+
+}
+.card{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.headline{
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  color:rgb(124, 119, 119);
+  font-size: large;
+}
+.line{
+text-align: center;
+color:rgb(100, 111, 122);
+
+}
+.modalimg{
+  justify-content: center;
+}  
+
+    </style>
+</head>
+<body>
+  
+    <!-- NAVBAR -->
+<header>
+  <nav class="navbar navbar-nav navbar-expand-lg navbar-dark bg-black sticky-top ">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="./index.html">
+        <img src="logo.png" class="img-fluid" width="10%" style="margin-left: 20px;" alt="" >
+        <p>GO BRIGHT</p>
+        
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto order-lg-0">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase active text-light" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 text-uppercase text-light dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="lamps.html">lamps</a></li>
+              <li><a class="dropdown-item" href="lights.html">lights</a></li>
+              <li><a class="dropdown-item" href="home accent.html">Home Accents</a></li>
+              <li><a class="dropdown-item" href="fans.html">fans</a></li>
+              <li><a class="dropdown-item" href="fairy lights.html">fairy lights</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="client.html">CLIENTS</a>
+          </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="about us.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="contact us.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="gallery.html">Gallery</a>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" href="cart.html"><i class="fas fa-shopping-cart me-1"></i>
+              Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" href="forvalid.html"><i
+                class="fas fa-user-circle me-1"></i>Register/SignIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <!-- nav end -->
+    <!-- Fans banner content -->
+  <h1 class="h1">All Types Of Fans</h1>
+  <p class="headline">We provide you the best quality of fans in latest designs and colors
+
+  </p>
+    <img src="http://www.oaktreevintage.com/web_photos/fans/fans_collage.jpg" width="100%" height="430px" alt="">
+  <!-- Fans banner content -->
+
+<!-- Cards Start -->
+    <div class="container">
+        <div class="row">
+
+    <!-- Ceiling Fans Cards Start -->
+            <h1 class="h1">Ceiling Fans</h1>
+          <p class="line">The best quality of ceiling fans in latest designs and colors</p>
+
+          <!-- card 1 start -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                   <img src="https://media.istockphoto.com/id/855540346/photo/ceiling-fan.webp?b=1&s=170667a&w=0&k=20&c=i_8HtNXzR-U-XO5lkK4uXTiFj03Bd9MlBqdXVTzrL_k=" height="262px" alt="">
+                  <div class="card-body">
+                    <h5 class="card-title">Ceiling fan with broad wings</h5>
+                    Rs.<i><b>19,999.PKR</b></i> <br>
+                    <a href="#" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#Modal1">Buy Now</a>
+
+          <!-- Modal 1 -->
+           <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Ceiling fan with broad wings</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+           <div class="modal-body">
+           <img  class="modalimg" src="https://media.istockphoto.com/id/855540346/photo/ceiling-fan.webp?b=1&s=170667a&w=0&k=20&c=i_8HtNXzR-U-XO5lkK4uXTiFj03Bd9MlBqdXVTzrL_k="width="400px" height="350px"  alt="">
+           <h6>About This Item</h6>
+           <p>Hunter Fan Dempsey Low Profile Indoor Ceiling and Remote Control, Metal,  White, 44 Inch.</p>
+           Rs. <del><i>21,999.PKR</i></del>
+           <i><b>19,999.PKR</b></i>
+           </div>
+           <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+           <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+           </div>
+           </div>
+           </div>
+           </div>
+                  </div>
+                </div>
+              </div>
+          <!-- card 1 end -->
+
+
+                    <!-- card 2 start -->
+
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                    <img src="https://media.istockphoto.com/id/1386900039/photo/moving-ceiling-fan-in-a-hotel-room-indoor-hanging-decorate-ceiling-fan-install-in-bedroom.webp?b=1&s=170667a&w=0&k=20&c=8INxxT9UHKfTqqgNlzJzsf-uQZtyNfdMx9JO5MaWMt8="height="262px" alt="">
+                  <div class="card-body">
+                    <h5 class="card-title">Black Metal Winged Ceiling Fan</h5>
+                    Rs.<i><b>19,999.PKR</b></i> <br>
+                    <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal2">Buy Now</a>
+
+                    <!-- Modal 2 -->
+           <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+             <h1 class="modal-title fs-5" id="exampleModalLabel">Black Metal Winged Ceiling Fan</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <img  class="modalimg" src="https://media.istockphoto.com/id/1386900039/photo/moving-ceiling-fan-in-a-hotel-room-indoor-hanging-decorate-ceiling-fan-install-in-bedroom.webp?b=1&s=170667a&w=0&k=20&c=8INxxT9UHKfTqqgNlzJzsf-uQZtyNfdMx9JO5MaWMt8="width="400px" height="350px"  alt="">
+            <h6>About This Item</h6>
+           <p>Portage Bay 50251 Hugger 52" Matte Black West Hill Ceiling Fan with Bowl Light Kit.</p>
+           Rs. <del><i>21,999.PKR</i></del>
+           <i><b>19,999.PKR</b></i>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+            </div>
+            </div>
+            </div>
+            </div>
+                  </div>
+                </div>
+              </div>
+          <!-- card 2 end -->
+
+                    <!-- card 3 start -->
+
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                 <img src="https://media.istockphoto.com/id/613312348/photo/silver-ceiling-fan.webp?b=1&s=170667a&w=0&k=20&c=NHxHusHeZutZiEMsSjDUM5FNNYSHF-DKEtnvc2YH6yk="height="262px" alt="">
+                  <div class="card-body">
+                 <h5 class="card-title">White ceiling fan with a light</h5>
+                 Rs.<i><b>25,999.PKR</b></i> <br>
+                 <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal3">Buy Now</a>
+                 <!-- Modal 3 -->
+           <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+             <h1 class="modal-title fs-5" id="exampleModalLabel">White ceiling fan with a light</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <img  class="modalimg" src="https://media.istockphoto.com/id/613312348/photo/silver-ceiling-fan.webp?b=1&s=170667a&w=0&k=20&c=NHxHusHeZutZiEMsSjDUM5FNNYSHF-DKEtnvc2YH6yk="width="400px" height="350px"  alt="">
+            <h6>About This Item</h6>
+           <p>Minka-Aire F845-DK Light Wave 44" Ceiling Fan with LED Light and Remote Control in Distressed Koa Finish</p>
+           Rs. <del><i>24,999.PKR</i></del>
+           <i><b>21,999.PKR</b></i>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+            </div>
+            </div>
+            </div>
+            </div>
+                  </div>
+                </div>
+              </div>
+          <!-- card 3 end -->
+
+                    <!-- card 4 start -->
+
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                <img src="https://media.istockphoto.com/id/1433580682/photo/view-on-black-ceiling-fan-with-tree-blades-made-from-plastic-installed-in-hotel-room-for.webp?b=1&s=170667a&w=0&k=20&c=2PpP-G7S5k_2YAmOipZ-ZF2_TybqmCQRZE3jizk3_E4="height="262px" alt="">
+                <div class="card-body">
+                <h5 class="card-title">Black Metal Wings Ceiling Fan</h5>
+                Rs.<i><b>17,999.PKR</b></i> <br>
+                <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal4">Buy Now</a>
+                <!-- Modal 4 -->
+           <div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+             <h1 class="modal-title fs-5" id="exampleModalLabel">Metal Wings Ceiling Fan</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img  class="modalimg" src="https://media.istockphoto.com/id/1433580682/photo/view-on-black-ceiling-fan-with-tree-blades-made-from-plastic-installed-in-hotel-room-for.webp?b=1&s=170667a&w=0&k=20&c=2PpP-G7S5k_2YAmOipZ-ZF2_TybqmCQRZE3jizk3_E4="width="400px" height="350px" alt="">
+              <h6>About This Item</h6>
+           <p>Hunter Fan Dempsey Low Profile Indoor Ceiling Fan with LED Light and Remote Control, Metal, Fresh White, 44 Inch
+            Amazon's
+            Choice
+            in Ceiling Fans by Hunter</p>
+           Rs. <del><i>20,999.PKR</i></del>
+           <i><b>17,999.PKR</b></i>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+            </div>
+            </div>
+            </div>
+            </div>
+                </div>
+                </div>
+              </div>
+          <!-- card 4 end -->
+
+                   
+   <!-- Ceiling Fans Cards End -->
+
+
+   <!-- Padestal Fans cards Start   -->
+
+       <h1 class="h1">Padestal Fans</h1>
+       <p class="line">You will find the best padestal fans in all designs.</p>  
+
+                 <!-- card 5 start -->
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/46/9d/1d/469d1d82db98bde1d633ba718bca261f.jpg"height="262px" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Deco Breeze Table Fan</h5>
+            Rs.<i><b>9,999.PKR</b></i> <br>
+            <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal5">Buy Now</a>
+            <!-- Modal 5 -->
+           <div class="modal fade" id="Modal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+             <h1 class="modal-title fs-5" id="exampleModalLabel">Deco Breeze Table Fan</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img class="modalimg" src="https://i.pinimg.com/236x/46/9d/1d/469d1d82db98bde1d633ba718bca261f.jpg"width="400px" height="350px"  alt="">
+              <h6>About This Item</h6>
+           <p>Amazing Basics Oscillating Dual Blade Standing Pedestal Fan with Remote,</p>
+           Rs. <i><b>9,999.PKR</b></i>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+            </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          <!-- card 5 end -->
+
+                    <!-- card 6 start -->
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/09/51/b7/0951b738d1ad0b9e0889889e2085f0ce.jpg"height="262px" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Fanimation Padestal Fan</h5>
+            Rs.<i><b>18,000.PKR.</b></i> <br>
+            <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal6">Buy Now</a>
+            <!-- Modal 6 -->
+           <div class="modal fade" id="Modal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+             <h1 class="modal-title fs-5" id="exampleModalLabel">Fanimation Padestal Fan</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img  class="modalimg" src="https://i.pinimg.com/236x/09/51/b7/0951b738d1ad0b9e0889889e2085f0ce.jpg"width="400px" height="350px"  alt="">
+              <h6>About This Item</h6>
+           <p>Deco Breeze Pedestal Standing 3 Speed Oscillating Fan with Adjustable</p>
+           Rs.<i><b>18,000.PKR</b></i>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+            </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- card 6 end -->
+
+                          <!-- card 7 start -->
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/0d/d3/c4/0dd3c4403db7da3d28baaad47cc3dde1.jpg"height="262px" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Ecohouzng Padestal Fan</h5>
+            Rs.<i><b>18,000.PKR</b></i> <br>
+            <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal7">Buy Now</a>
+            <!-- Modal 7 -->
+           <div class="modal fade" id="Modal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+             <h1 class="modal-title fs-5" id="exampleModalLabel">Ecohouzng Padestal Fan</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img  class="modalimg" src="https://i.pinimg.com/236x/0d/d3/c4/0dd3c4403db7da3d28baaad47cc3dde1.jpg"width="400px" height="350px"  alt="">
+              <h6>About This Item</h6>
+           <p>Vornado 683 Medium Pedestal Whole Room Air Circulator Fan, 3 Speed Control, Adjustable Standing</p>
+           Rs. <del><i>22,000.PKR</i></del>
+           <i><b>18,000.PKR</b></i>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+            </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          <!-- card 7 end -->
+
+                          <!-- card 8 start -->
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/93/0f/f8/930ff84a84a5561f4316eb50205cc1f2.jpg"height="262px" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Floor Standing Fan</h5>
+            Rs.<i><b>21,999.PKR</b></i> <br>
+            <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal8">Buy Now</a>
+            <!-- Modal 8 -->
+           <div class="modal fade" id="Modal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+             <h1 class="modal-title fs-5" id="exampleModalLabel">Floor Standing Fan</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img  class="modalimg" src="https://i.pinimg.com/236x/93/0f/f8/930ff84a84a5561f4316eb50205cc1f2.jpg"width="400px" height="350px"  alt="">
+              <h6>About This Item</h6>
+           <p>Dreo Pedestal Fan with Remote, PolyFan 513S, 43'' Quiet Standing Fan for Home Bedroom, </p>
+           Rs. <del><i>24,999.PKR</i></del>
+           <i><b>21.999.PKR</b></i>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+            </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+           <!-- card 8 end -->
+
+  <!-- Padestal Fans Cards end -->
+
+
+  <!--  Bracket Fans Cards Start-->
+      <h1 class="h1">Bracket Fans</h1>
+    <p class="line">We have wide range of bracket fans in unique styles</p>
+
+              <!-- card 9 start -->
+
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/7f/a4/0b/7fa40b95adef6918b8bb33ab78b39b06.jpg"height="262px" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Metal Body Wall Fan</h5>
+            Rs.<i><b>16,999.PKR</b></i> <br>
+            <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal9">Buy Now</a>
+            <!-- Modal 9 -->
+            <div class="modal fade" id="Modal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+             <h1 class="modal-title fs-5" id="exampleModalLabel">Metal Body Wall Fan</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img  class="modalimg" src="https://i.pinimg.com/236x/7f/a4/0b/7fa40b95adef6918b8bb33ab78b39b06.jpg"width="400px" height="350px"  alt="">
+              <h6>About This Item</h6>
+           <p>Comfort Zone 2-Speed Oscillating High Velocity Industrial Wall Fan, All-Metal Construction, Adjustable Tilt, Steel Mounting Bracket with Adjustable Angle, Aluminum Blades</p>
+           Rs. <del><i>18,000.PKR</i></del>
+           <i><b>16,999.PKR</b></i>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+            </div>
+            </div>
+            </div>
+            </div>
+
+          </div>
+        </div>
+      </div> 
+          <!-- card 9 end -->
+
+                          <!-- card 10 start -->
+
+     <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/df/c7/de/dfc7de491468fda86c2e0f93c2d70eb4.jpg"height="262px" alt=""> 
+          <div class="card-body">
+            <h5 class="card-title">Black Mounted Fan</h5>
+            Rs.<i><b>12,000.PKR</b></i> <br>
+            <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal10">Buy Now</a>
+            <!-- Modal 10 -->
+           <div class="modal fade" id="Modal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+             <h1 class="modal-title fs-5" id="exampleModalLabel">Black Mounted Fan</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img class="modalimg" src="https://i.pinimg.com/236x/df/c7/de/dfc7de491468fda86c2e0f93c2d70eb4.jpg"width="400px" height="350px"  alt=""> 
+              <h6>About This Item</h6>
+           <p>HydroMist F10-14-011 18 Inch Mounting Bracket Outdoor Oscillating Fan,color,Black</p>
+           Rs. <del><i>15,999.PKR</i></del>
+           <i><b>12,000.PKR</b></i>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+            </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+          <!-- card 10 end -->
+
+                          <!-- card 11 start -->
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/8c/ba/47/8cba4740aa0ead496be4925afa2e66d8.jpg" height="262px" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Controlable Bracket fan</h5>
+            Rs.<i><b>10,000.PKR</b></i> <br>
+            <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal11">Buy Now</a>
+            <!-- Modal 11 -->
+           <div class="modal fade" id="Modal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+             <h1 class="modal-title fs-5" id="exampleModalLabel">Controlable Bracket fan</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img  class="modalimg" src="https://i.pinimg.com/236x/8c/ba/47/8cba4740aa0ead496be4925afa2e66d8.jpg"width="400px" height="350px"  alt="">
+              <h6>About This Item</h6>
+           <p> Simple Deluxe Cool Breeze 18-Inch Wall Mount Fan with 3 Speed Settings, 120-Degree Oscillation, Quiet and Effective Cooling for Home</p>
+           Rs. <del><i>10,000.PKR</i></del>
+           <i><b>12,000.PKR</b></i>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+            </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+            <!-- card 11 end -->
+
+                          <!-- card 12 start -->
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+            <img src="https://i.pinimg.com/236x/d2/6e/ab/d26eab247f7365e175cd4a8e486792c9.jpg" height="262px" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Fancy Bracket Fan</h5>
+            Rs.<i><b>9,999.PKR</b></i> <br>
+            <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal12">Buy Now</a>
+            <!-- Modal 12 -->
+           <div class="modal fade" id="Modal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+             <h1 class="modal-title fs-5" id="exampleModalLabel">Fancy Bracket Fan</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img  class="modalimg" src="https://i.pinimg.com/236x/d2/6e/ab/d26eab247f7365e175cd4a8e486792c9.jpg"width="400px" height="350px"  alt="">
+              <h6>About This Item</h6>
+           <p> Wall-Mount Misting Fan, 3-speed IP44 Waterproof Oscillating Wall Fan, </p>
+           Rs. <del><i>11,999.PKR</i></del>
+           <i><b>9,999.PKR</b></i>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning btnn">Add to Cart</button>
+            </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+         <!-- card 12 end -->
+
+   <!--  Bracket Fans Cards End-->
+   
+        </div>
+    </div>
+    <!-- cards end -->
+    <br><br>
+    <!-------------------------------------- pdf button -------------------------- -->
+<h1 style="text-align: center;">More Information</h1> 
+<p style="text-align: center;">To Get More Information About Our Products,You can downlaod the document here.</p> <br>
+<div class="container text center" style="width: fit-content;">
+  <div class="row">
+    <!-- <a href="documentation1.pdf" class="btn btn-warning" downlaod>Download Pdf</a> -->
+    <a href="documentation1 word.docx" downlaod> <button class="btn btn-warning">Downlaod  </button></a>
+
+
+  
+
+</div>
+</div>
+
+<!-------------------------------------- pdf button -------------------------- -->
+
+ <!------------------------------------ Footer Start-------------------------------------------------- -->
+
+ <section style="background-color:black;color: #fff;">
+  <div class="container text-center text-md-start mt-5">
+    <!-- Grid row -->
+    <div class="row mt-3">
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <!-- Content -->
+        <h6 class="text-uppercase fs-4 fw-bold mb-4 mt-5" >
+          <i class="fa-solid fa-lighthouse" ></i>
+          <img src="logo.png" class="img-fluid" width="30%" alt=""> <br>
+          GO BRIGHT Light House
+        </h6>
+        <div class="text-start">
+          <p>
+            "GO BRIGHT Light House offer a stunning top-quality 
+            collection of high brands of lighting products 
+            at affordable prices. Visit us to have 
+            ultra luxurious lights for the interior and exterior decor
+            of your home and office."
+          </p>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mt-5 mx-auto mb-4">
+        <!-- Links -->
+        <h6 class="  fs-4 fw-bold mb-4 ms-3 line1">
+        <i class="fa-solid fa-bars"></i> Menus
+        </h6>
+        <p>
+        <div class="nav-link">
+          <ul class>
+            <li style="margin-top: 8px;">
+              <a class="nav-link " href="index.html"> Home </a>
+            </li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="fairy lights.html">Fairy lights</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="lamps.html">Lamps </a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="fans.html">Fans</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="lights.html">Lights</a></li>
+            <br>
+              <li style="margin-top: 8px;"><a class="nav-link" href="home accent.html">Home Accents</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="contact us.html">Contact Us</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link   " href="about us.html">About Us</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link   " href="gallery.html">Gallery</a></li>
+
+          </ul>
+        </div>
+      </div>
+     
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-5 ">
+        <!-- Links -->
+        <h6 class=" fs-4 fw-bold mb-4 line2">Head Office</h6>
+        <p><i style="color: #ffb223; ;" class=" fas fa-envelope me-1"></i><span
+            class="fs-6">info@GOBRIGHT.com</span>
+        </p>
+        <p><i style="color: #ffb223; ;" class=" fas fa-phone me-1"></i><span>
+            (021) 36630102</span>
+        </p>
+        <p>
+          <i style="color: #ffb223;" class="fa-solid fa-location "></i>
+          <span class="ms-1"> Aptech Computer Education North Nazimabad
+            Center، SD-1, Block A North Nazimabad Town,
+            Karachi, 74700</span>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+  </div>
+</section>
+<!-- Section: Links  -->
+<div style="height: 1px;background-color: grey;"></div>
+<!-- Copyright -->
+<div class="text-center p-4" style="background-color: #000;color: #fff;">
+
+  Copyright © 2023 GO BRIGHT Light House. | All Rights Reserved
+</div>
+<!-- Copyright -->
+</footer>
+
+<!------------------------------------ Footer ended------------------------------------------- --->
+
+</body>
+</html>
+
+<script>
+  $(document).ready(function(){
+    $('.btnn').click(function(){
+    Swal.fire({
+      title: "Good job!",
+      text: "Item added to cart!",
+      icon: "success"
+    });
+  })
+  })
+  </script>

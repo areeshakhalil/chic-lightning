@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/onepage.css">
+  <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<!-- Include a required theme -->
+<!-- <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css"> -->
+<script src="sweetalert2/dist/sweetalert2.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+<style>
+
+
+              /* navbar css */
+        .navbar {
+          font-family: 'Playfair Display', serif;
+          font-weight: 700;
+        }
+
+        .nav-link:hover {
+          color: rgba(250, 174, 33, 0.788) !important;
+
+        }
+
+        .nav-link a {
+          font-size: 14px;
+          font-weight: 700
+        }
+
+        .dropdown-item:hover {
+          color: rgba(250, 174, 33, 0.788) !important;
+
+        }
+
+        .dropdown-item {
+          color: black !important;
+          background-color: white !important;
+          font-weight: 500 !important;
+        }
+
+        .navbar {
+          height: auto;
+
+        }
+
+        .navbar-brand img {
+          height: 80px;
+          width: fit-content;
+        }
+          /* vanbarcss end */
+
+        textarea {
+            resize: none;
+        }
+        b{
+            color: red;
+        }
+        .form-control{
+            border-color:green;
+        }
+        
+        h2 {
+            font-size: 40px;
+            font-family: "Quicksand";
+            padding-left: 0px;
+            font-weight: 500;
+        }
+        
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar navbar-nav navbar-expand-lg navbar-dark bg-black sticky-top ">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="./index.html">
+        <img src="logo.png" class="img-fluid" width="10%" style="margin-left: 20px;" alt="" >
+        <p>GO BRIGHT</p>
+        
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto order-lg-0">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase active text-light" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 text-uppercase text-light dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="lamps.html">lamps</a></li>
+              <li><a class="dropdown-item" href="lights.html">lights</a></li>
+              <li><a class="dropdown-item" href="home accent.html">Home Accents</a></li>
+              <li><a class="dropdown-item" href="fans.html">fans</a></li>
+              <li><a class="dropdown-item" href="fairy lights.html">fairy lights</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="client.html">CLIENTS</a>
+          </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="about us.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="contact us.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase text-light" href="gallery.html">Gallery</a>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" href="cart.html"><i class="fas fa-shopping-cart me-1"></i>
+              Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-light" href="forvalid.html"><i
+                class="fas fa-user-circle me-1"></i>Register/SignIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <!-- nav end -->
+
+    <br><br><br>
+    
+    <div class="container text-center">
+        <div class="card mb-3 mt-3 shadow" style="max-width: auto;"><br>
+          <div class="row g-0 ms-5 ">
+            <div class="col-md-4 ">
+              <h2 class="me-5 mt-5">Our Branches</h2>
+              <div class="text-start mt-5"> <i class=" fa-solid fa-envelope fa-lg" style="color: #ffb223;margin-top: 20px;"></i>
+                <span class="text-start ms-1 fw-semibold">info@GO BRIGHT.com</span><br> <br>
+                <h4 class="mt-3 fw-semibold">  North Nazimabad Branche </h4>
+                <i class="mt-3 fa-solid fa-location-dot fa-lg " style="color: #ffb223;"></i>
+                <span class="text-break  text-start ms-1 fw-semibold">Aptech Computer Education North Nazimabad Center،
+                  SD-1, Block A North Nazimabad Town, Karachi, 74700</span></div><br><br>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h2 class="me-5">Send Us a Message</h2>
+                <br>
+                <form class="row g-3 " name="fm" onsubmit="return validate()">
+                  <div class="col-md-6">
+                    <label for="fname" class="fw-semibold fs-4">Name</label>
+                    <div class="input-group ">
+                      <span class="input-group-text bg-white"><i class="fa-solid fa-user"></i></span>
+                      <input type="text" id="box_1" name="fname" class="form-control" autocomplete="off"
+                        placeholder="Your Name">
+                    </div>
+                    <b> <i id="b_1"></i> </b> <br>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lname" class="fw-semibold fs-4">Phone</label>
+                    <div class="input-group ">
+                      <span class="input-group-text bg-white"><i class="fa-solid fa-phone"></i></span>
+                      <input type="number" id="box_2" name="lname" class="form-control" autocomplete="off"
+                        placeholder="Your Phone Number" oninput="onlynumber(this)">
+                    </div>
+                    <b> <i id="b_2"></i> </b> <br>
+              </div>
+              <div class="col-md-12 ">
+                <label for="email" class="fw-semibold fs-4">Email</label>
+                <div class="input-group ">
+                  <span class="input-group-text bg-white"><i class="fa-solid fa-envelope"></i></span>
+                  <input type="mail" id="box_3" name="email" class="form-control" autocomplete="off"
+                    placeholder="Your Email"></div>
+                    <b> <i id="b_3"></i> </b> <br><br>
+              <div class="col-md-12 ">
+                <label for="message" class=" fw-semibold fs-4">Massage</label>
+                <div class="input-group ">
+                  <span class="input-group-text bg-white"><i class="fa-solid fa-comment"></i></span>
+                  <textarea class="form-control" id="box_4" name="message" autocomplete="off"
+                    placeholder="Enter Your Massage"></textarea></div>
+                    <b> <i id="b_4"></i> </b><br>
+              <div class="col-12">
+                <input type="button" value="Send" class="btn btn-warning" onclick="validate()"></div>
+              </form>
+          </div>
+        </div>
+      </div>
+      <br><br><br>
+      </div>
+    
+    </div>
+  
+      
+    
+
+      <script>
+        function validate(){
+            var YName=document.getElementById("box_1").value
+                if(YName==""){
+                    document.getElementById("b_1").innerHTML="**Please fill this field ";
+                    return false
+                }
+                if(YName.length<3 || YName.length>20){
+                    document.getElementById("b_1").innerHTML="**Atleast Enter your Valid name "
+                    return false;
+                }
+                else{
+                    document.getElementById("b_1").innerHTML=null
+                }
+            
+            var PNum=document.getElementById("box_2").value
+            if(PNum==""){
+                document.getElementById("b_2").innerHTML="**Please fill this field";
+                return false
+            }
+            if(PNum.length<11 || PNum.length>11){
+                document.getElementById("b_2").innerHTML="**Atleast Enter 11 Digits "
+                return false;
+            }
+                else{
+                    document.getElementById("b_2").innerHTML=null
+                }
+            var mail=document.getElementById("box_3").value
+                if(mail==""){
+                    document.getElementById("b_3").innerHTML="**Please fill this field ";
+                    return false
+                }
+                if(!mail.includes('@')) {
+                    document.getElementById('b_3').innerHTML = "Invalid Email Format '@'";
+                    return false
+                }    
+                else{
+                    document.getElementById("b_3").innerHTML=null
+                }
+            var message=document.getElementById("box_4").value
+                if(message==""){
+                    document.getElementById("b_4").innerHTML="**Please fill this field <br>";
+                    return false
+                }
+                else{
+                    document.getElementById("b_4").innerHTML=null
+                }
+                
+                if (YName.trim() !== '' && mail.trim() !== '' && PNum.trim() !== '' && message.trim() !== '') {
+                  Swal.fire({
+                    title: "Message Sent Successfully!",
+                    
+                    icon: "success"
+                  });
+                  fm.reset();
+                }
+  
+
+            
+    
+        }
+    </script>
+    
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.1377120008005!2d67.03045847529862!3d24.927378142576675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f90157042d3%3A0x93d609e8bec9a880!2sAptech%20Computer%20Education%20North%20Nazimabad%20Center!5e0!3m2!1sen!2s!4v1702496474376!5m2!1sen!2s" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div><br><br>
+    </div>
+ <!------------------------------------ Footer Start-------------------------------------------------- -->
+
+ <section style="background-color:black;color: #fff;">
+  <div class="container-fluid text-center text-md-start mt-5">
+    <!-- Grid row -->
+    <div class="row mt-3">
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <!-- Content -->
+        <h6 class="text-uppercase fs-4 fw-bold mb-4 mt-5" >
+          <i class="fa-solid fa-lighthouse" ></i>
+          <img src="logo.png" class="img-fluid" width="30%" alt=""> <br>
+          GO BRIGHT Light House
+        </h6>
+        <div class="text-start">
+          <p>
+            "GO BRIGHT Light House offer a stunning top-quality 
+            collection of high brands of lighting products 
+            at affordable prices. Visit us to have 
+            ultra luxurious lights for the interior and exterior decor
+            of your home and office."
+          </p>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mt-5 mx-auto mb-4">
+        <!-- Links -->
+        <h6 class="  fs-4 fw-bold mb-4 ms-3 line1">
+        <i class="fa-solid fa-bars"></i> Menus
+        </h6>
+        <p>
+        <div class="nav-link">
+          <ul class>
+            <li style="margin-top: 8px;">
+              <a class="nav-link " href="index.html"> Home </a>
+            </li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="fairy lights.html">Fairy lights</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="lamps.html">Lamps </a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="fans.html">Fans</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="lights.html">Lights</a></li>
+            <br>
+              <li style="margin-top: 8px;"><a class="nav-link" href="home accent.html">Home Accents</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link" href="contact us.html">Contact Us</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link   " href="about us.html">About Us</a></li>
+            <br>
+            <li style="margin-top: 8px;"><a class="nav-link   " href="gallery.html">Gallery</a></li>
+
+          </ul>
+        </div>
+      </div>
+     
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-5 ">
+        <!-- Links -->
+        <h6 class=" fs-4 fw-bold mb-4 line2">Head Office</h6>
+        <p><i style="color: #ffb223; ;" class=" fas fa-envelope me-1"></i><span
+            class="fs-6">info@GOBRIGHT.com</span>
+        </p>
+        <p><i style="color: #ffb223; ;" class=" fas fa-phone me-1"></i><span>
+            (021) 36630102</span>
+        </p>
+        <p>
+          <i style="color: #ffb223;" class="fa-solid fa-location "></i>
+          <span class="ms-1"> Aptech Computer Education North Nazimabad
+            Center، SD-1, Block A North Nazimabad Town,
+            Karachi, 74700</span>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+  </div>
+</section>
+<!-- Section: Links  -->
+<div style="height: 1px;background-color: grey;"></div>
+<!-- Copyright -->
+<div class="text-center p-4" style="background-color: #000;color: #fff;">
+
+  Copyright © 2023 GO BRIGHT Light House. | All Rights Reserved
+</div>
+<!-- Copyright -->
+</footer>
+
+<!------------------------------------ Footer ended------------------------------------------- --->
+
+
+
+
+</body>
+</html>
